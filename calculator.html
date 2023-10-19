@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Interface</title>
+    <style>
+        .calc{
+            border:2px solid;
+            margin:8px;
+            width:300px;
+            padding:8px;
+        }
+        input[type="text"],input[type="button"]
+        {
+            margin:10px;
+            width:50px;
+            height:50px;
+            font-size:25px;
+        }
+    </style>
+    <script>
+     function addtodisplay(value)
+     {
+        document.getElementById("display").value+=value;
+     }
+     function calculate()
+        {
+            document.getElementById("display").value=eval(document.getElementById("display").value);
+        }
+     function clear1()
+     {
+        document.getElementById("display").value="";
+     }
+    </script>
+</head>
+<body>
+    <div class="calc">
+    <input type="text" id="display">
+    <br>
+    <input type="button" value="1" onclick="addtodisplay('1')">
+    <input type="button" value="2" onclick="addtodisplay('2')">
+    <input type="button" value="3" onclick="addtodisplay('3')">
+    <input type="button" value="+" onclick="addtodisplay('+')">
+    <br>
+    <input type="button" value="4" onclick="addtodisplay('4')">
+    <input type="button" value="5" onclick="addtodisplay('5')">
+    <input type="button" value="6" onclick="addtodisplay('6')">
+    <input type="button" value="-" onclick="addtodisplay('-')">
+    <br>
+    <input type="button" value="7" onclick="addtodisplay('7')">
+    <input type="button" value="8" onclick="addtodisplay('8')">
+    <input type="button" value="9" onclick="addtodisplay('9')">
+    <input type="button" value="*" onclick="addtodisplay('*')">
+    <input type="button" value="0" onclick="addtodisplay('0')">
+    <input type="button" value="00" onclick="addtodisplay('00')">
+    <input type="button" value="." onclick="addtodisplay('.')">
+    <input type="button" value="/" onclick="addtodisplay('/')">
+    <br>
+    <input type="button" value="=" onclick="calculate()">
+    <input type="button" value="C" onclick="clear1()">
+</div>
+</body>
+</html>
